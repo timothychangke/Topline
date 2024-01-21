@@ -1,14 +1,27 @@
-# YOUR PROJECT TITLE
-### Video Demo:  https://youtu.be/TrH1bro4mwo
-### Description:
-My project is a one stop shop for anything related to stocks. It is a website built on flask where its main purpose is to track the stock performance of stocks in a users portfolio as well as provide stock related news and information.
-#### Portfolio Tracker
-The portfolio tracker stores stocks added by the user into a sql database, where it tracks and returns live prices, in real time profit and loss as well as other useful metrics. The user has to input the stocks he or she owns together with information like the price it was bought at and when it was bought, so that the rate of return can be calculated. The portfolio itself can be manipulated on the site, with options to add, remove and change the purchase price or quantity. Invalid responses such as illogical dates and incorrect stock ticker symbols will return an error pop-up created through flash-messaging. A pie chart of the portfolio will be shown, giving the user a clear representation of what he or she owns.
-#### News
-The Website can return financial news by retrieving data from a news API. Stock inputs are taken from the stocks in the user's portfolio and sent to the news API so that the output is curated and relevant. Links to the entire article is provided as well.
-#### Stock Info
-A search bar at the top right hand corner allows for the user to search for any stock of their interest and stock-related information and pricing metrics will be returned. The information is provided by the iexcloud API
-#### Account settings
-Basic account settings like the changing of username and passwords are available as well.
+🚀 Welcome to TopLine - Your Ultimate Stock Companion! 📈
 
-Everything was built form scratch and the cs50 libraries were not used. It is admitted that the idea is simplistic and more emphasis was placed on functionality and aesthetic, but overall I think the it is a usable piece of code and I myself use it to track my portfolio. 
+What is TopLine?
+TopLine is not just a website; it's your one-stop-shop for all things stocks! 🌐 Built with Flask, this dynamic platform is designed to make your stock market journey seamless, informative, and fun!
+
+📊 Portfolio Tracker
+Track your stocks like a pro with our intuitive Portfolio Tracker! 📈 Input the stocks you own, their purchase details, and watch as TopLine brings your portfolio to life! Real-time prices, live profit and loss calculations, and other useful metrics are at your fingertips. Manipulate your portfolio effortlessly - add, remove, or update stocks with ease. 🍰 And hey, enjoy a visual treat with a pie chart representing your portfolio composition!
+
+📰 News Feed
+Stay in the loop with the latest financial news tailored just for you! 📡 TopLine pulls news related to the stocks in your portfolio, ensuring you're always in sync with market happenings. Links to full articles are just a click away! 🚀
+
+🔍 Stock Info
+Curious about a specific stock? Our search bar at the top right corner has got you covered! 🔍 Type in any stock of interest, and voila! Stock-related information and pricing metrics from the iexcloud API are right at your fingertips!
+
+👤 Account Settings
+Keep your TopLine experience personalized with easy-to-use account settings! Change your username or password with a few clicks and make TopLine truly yours.
+
+🛠️ Built from Scratch
+No shortcuts here! TopLine was crafted from scratch, with no reliance on cs50 libraries. The emphasis? Functionality and aesthetics! It's simple, usable, and even the creator swears by it for personal portfolio tracking.
+
+🚨 Error Handling
+Worried about mistakes? Fret not! TopLine's got your back with error pop-ups using flash messaging. Illogical dates or incorrect stock ticker symbols? We'll let you know!
+
+🚀 Join the TopLine Community!
+Whether you're a seasoned investor or just diving into the world of stocks, TopLine is here for you. Start tracking, stay informed, and make your stock journey a breeze!
+
+🚀 Happy Investing with TopLine! 📊💰✨
