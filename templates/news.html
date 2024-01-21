@@ -1,0 +1,31 @@
+{% extends "layout.html"%}
+{% block title %}
+    news
+{% endblock %}
+
+{% block main%}
+<div id="news-container">
+    <table class="table tablestriped">
+        <tbody>
+            {% for news in stuff %}
+            <tr>
+                <th>
+                    <div style="display: flex; align-items: center;">
+                        <img src="{{ news["urlToImage"] }}" style="height: 80px; width: auto; margin-right: 40px">
+                        <h2>{{ news["title"] }}</h2>
+                    </div>
+                </th>
+                <td style="width: 450px;">
+                    {% if news["author"] != None %}
+                        <h5>{{ news["author"] }}</h5>
+                    {% endif %}
+                    <section>{{ news["content"] }}</section>
+                    <p>More at <a href="{{ news["url"] }}">article</a></p>
+                    <footer>{{ news["publishedAt"] }}</footer>
+                </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

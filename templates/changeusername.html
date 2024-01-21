@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block title %}
+    Change Username
+{% endblock %}
+
+{%block main%}
+    <div id="login">
+        <div class="login-border">
+            <h1 style="margin: 0px;"><i class="fa-solid fa-user-pen"></i></h1>
+            <h3>
+                Change Username
+            </h3>
+            <form action="/changeusername" method="post">
+                <div class="login-input">
+                    <input name="new-username" id="login-username" required autocomplete="off" autofocus class="form-control mx-auto w-auto" type="text" placeholder="New Username" aria-label="default input example">
+                </div>
+                <div class="login-input">
+                    <input type="password" name="password" id="login-password" required autocomplete="off" class="form-control mx-auto w-auto" type="text" placeholder="Password" aria-label="default input example">
+                </div>
+                <div class="login-button-div">
+                <button class="btn btn-primary" type="submit" id="login-button">Change</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock%}

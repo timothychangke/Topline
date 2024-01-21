@@ -1,0 +1,9 @@
+import os
+
+
+IEX_API_TOKEN = "pk_c2484b681bb4426a931f5d30c67a8144"
+os.environ["API_TOKEN"] = IEX_API_TOKEN
+
+NEWS_API_TOKEN = "07ba1764d0d645e49e30d378c53d91e9"
+
+

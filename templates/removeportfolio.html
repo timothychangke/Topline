@@ -1,0 +1,20 @@
+{% extends "layout.html"%}
+{% block title %}
+    Remove from Portfolio
+{% endblock %}
+
+{% block main %}
+<div id="login">
+    <div class="login-border">
+        <h3>Remove stock in portfolio</h3>
+        <form action="/removeportfolio" method="post">
+            <div class="login-input">
+                <input name="remove" id="login-username" required autocomplete="off" autofocus class="form-control mx-auto w-auto" type="text" placeholder="Ticker Symbol" aria-label="default input example">
+            </div>
+            <div class="login-button-div">
+                <button class="btn btn-primary" type="submit" id="login-button">Confirm</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

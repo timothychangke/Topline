@@ -1,0 +1,23 @@
+{% extends "layout.html"%}
+{% block title %}
+    Change buy price
+{% endblock %}
+
+{% block main %}
+<div id="login">
+    <div class="login-border">
+        <h3>Change buy price</h3>
+        <form action="/changebuyprice" method="post">
+            <div class="login-input">
+                <input name="ticker" id="login-username" required autocomplete="off" autofocus class="form-control mx-auto w-auto" type="text" placeholder="Ticker Symbol" aria-label="default input example">
+            </div>
+            <div class="login-input">
+                <input name="new_price" id="login-username" required autocomplete="off" autofocus class="form-control mx-auto w-auto" type="text" placeholder="New price" aria-label="default input example">
+            </div>
+            <div class="login-button-div">
+                <button class="btn btn-primary" type="submit" id="login-button">Confirm</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

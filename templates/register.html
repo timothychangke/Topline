@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block title %}
+    Register
+{% endblock %}
+
+{%block main%}
+    <div id="login">
+        <div class="login-border" style="position: relative; top: 1%">
+            <div class="brand-name-container">
+                <h3 class="brand-name"><span class="light-green">Top</span><span class="dark-green">line</span></h3>
+                <p class="brand-name-p2">the portfolio tracker</p>
+            </div>
+            <section id="register-text">
+                Register now to start tracking <br>your stock analytics!
+            </section>
+            <p id="name-error-message">Name cannot contain numbers</p>
+        <form action="/register" method="post" autocomplete="off">
+           <div class="login-input" style="margin-top: 15px; margin: 15px 0px 8px 0px; text-align: center;">
+                <input name="title" id="login-fullname" required autocomplete="off" autofocus class="form-control mx-auto w-auto" type="text" placeholder="Full name" aria-label="default input example" pattern="[A-Za-z\s]*" oninvalid="setCustomValidity('Numerical characters not allowed')" onchange="this.setCustomValidity('')">
+            </div>
+                <div class="login-input" style="margin: 8px 0px 8px 0px;">
+                    <input name="username" id="login-username" required autocomplete="off" class="form-control mx-auto w-auto" type="text" placeholder="Username" aria-label="default input example">
+                </div>
+                <div class="login-input" style="margin: 8px 0px 8px 0px;">
+                    <input name="password" id="login-password" required autocomplete="off" class="form-control mx-auto w-auto" type="password" placeholder="Password" aria-label="default input example">
+                </div>
+                <div class="login-input" style="margin: 8px 0px 8px 0px;">
+                    <input name="confirmation" id="login-password-conf" required autocomplete="off" class="form-control mx-auto w-auto" type="password" placeholder="Confirm Password" aria-label="default input example">
+                </div>
+                <div class="login-button-div">
+                <button class="btn btn-primary" type="submit" id="login-button">Register</button>
+                </div>
+            </form>
+        </div>
+        <div id="already-have-account">
+            <p>Already have an account? <br><a id="already-have-account-button" href="/login">Log in</a></p>
+        </div>
+    </div>
+    
+{% endblock%}

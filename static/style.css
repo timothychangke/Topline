@@ -1,0 +1,391 @@
+#nav-bar
+{
+    background-color: #f0efef;
+}
+
+#leftMenu
+{
+    width: 20vw;
+}
+#leftMenu #close-button
+{
+    position: relative;
+    left: 80%;
+    width: 20%;
+    text-align: center;
+}
+.brand-name-container
+{
+    padding: 0px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+.brand-name
+{
+    font-family: Lobster, cursive;
+    font-size: 80px;
+    margin: auto;
+}
+.brand-name-p2
+{
+    font-family: Arial;
+    font-size: 15px;
+    position: relative;
+    left: 45px;
+    bottom: 15px;
+    color: #235311;
+}
+span.light-green
+{
+    color: #277606;
+}
+span.dark-green
+{
+    color: #5DDC29;
+}
+#register-text
+{
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 0px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #adadad;
+    font-size: 15px;
+}
+#search
+{
+    width: 30vw;
+    display: flex;
+    flex-direction:row;
+}
+#search-bar
+{
+
+    width: 25vw;
+}
+#search-button
+{
+    color: #008CBA;
+    border-color: #008CBA;
+}
+#search-button:hover
+{
+    background-color: #008CBA;
+    color: white;
+}
+
+#login
+{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #E8E5E5;
+}
+#login-form
+{
+    padding: 0px;
+
+}
+.login-border
+{
+    border: 1px solid #B8B3B3;
+    padding: 70px;
+    background-color: white;
+    padding-top: 70px;
+    margin-bottom: 2vh;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 2px 2px 5px 1px #aaaaaa;
+    position: relative;
+    bottom: 10%;
+}
+#login-image
+{
+    width: 200px;
+    height: auto;
+}
+.login-input
+{
+    padding: 0px;
+    width: 250px;
+    margin-top: 30px;
+    margin-bottom: 1.5em;
+}
+#login-username
+{
+    width: 250px;
+}
+.login-button-div
+{
+    width: 250px;
+    display: flex;
+    justify-content: right;
+}
+#login-button
+{
+    width: 220px;
+    height: 30px;
+    text-align: center;
+    padding: 0px;
+    margin: auto;
+}
+#login-fullname:invalid > #name-error-message
+{
+    visibility: visible !important;
+}
+#login-fullname:valid
+{
+    border: 1px solid #ced4da;
+}
+#name-error-message
+{
+    position: absolute;
+    top: 360px;
+    left: 730px;
+    font-size: 12px;
+    color: red;
+    visibility: hidden;
+}
+#or
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    margin: 0.5em;
+    padding: 0px;
+    color: #858585;
+}
+span.or
+{
+    margin: 0px;
+    font-size: 14px;
+}
+hr
+{
+    width: 90px;
+    padding: 0px;
+}
+#login-register
+{
+    text-align: center;
+}
+#login-register-button
+{
+    color: #0a58ca;
+    text-decoration: none;
+}
+#login-register-button:hover
+{
+    text-decoration: underline;
+}
+#already-have-account
+{
+    border: 1px solid #B8B3B3;
+    padding: 20px 83px 14px 83px;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 18vh;
+    box-shadow: 2px 2px 5px 1px #aaaaaa;
+    width: 23.5%;
+}
+#already-have-account-button
+{
+    color: #0a58ca;
+    text-decoration: none;
+}
+#already-have-account-button:hover
+{
+    text-decoration: underline;
+}
+#flash-alert
+{
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#search-container
+{
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 250px;
+}
+#ticker-dot
+{
+    font-size: 14px;
+    color: #a0a0a0;
+
+}
+#search-logo
+{
+    width: 100px;
+    height: auto;
+}
+.search-header
+{
+    display: flex;
+}
+#search-company-name
+{
+    font-size: 50px;
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#search-logo
+{
+    height: 70px;
+    width: auto;
+}
+#search-company-industry
+{
+    font-style: italic;
+    color: gray;
+}
+
+#company-info
+{
+    margin-left: 50px;
+}
+#price-info
+{
+    border: 1px solid #aaa6a6;
+    border-radius: 10px;
+    background-color: #ffffff;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 95%;
+    padding: 10px;
+}
+#price-info th
+{
+    text-align: left;
+    font-weight: normal;
+}
+#price-info td
+{
+    text-align: right;
+    font-weight: bold;
+}
+#company-info-table
+{
+    border-radius: 10px;
+    background-color:#ffffff;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+    
+}
+#company-info th
+{
+    text-align: left;
+    font-weight: normal;
+}
+#company-info td
+{
+    text-align: right;
+    font-weight: bold;
+}
+tr
+{
+    border-top: 1px solid rgb(196, 196, 196);
+    border-bottom: 1px solid rgb(196, 196, 196);
+}
+.watchlist-dropdown
+{
+    display: flex;
+}
+.watchlist-dropdown i
+{
+    position: relative;
+    right: 8%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0px;
+}
+.watchlist-homepage
+{
+    padding: 100px;
+}
+.th-watchlist-homepage
+{
+    text-align: center;
+}
+.td-watchlist-homepage
+{
+    text-align: center;
+}
+#news-container
+{
+    padding: 100px;
+}
+.input-icon {
+    position: relative;
+  }
+  
+.input-icon > i {
+  position: absolute;
+  display: block;
+  transform: translate(0, 50%);
+  bottom: 28%;
+  left: 11%;
+  pointer-events: none;
+  width: 25px;
+  text-align: center;
+  font-style: normal;
+}
+.input-icon > input {
+  padding-left: 25px;
+  padding-right: 0;
+}
+
+.input-icon-right > i {
+  right: 0;
+}
+
+.input-icon-right > input {
+  padding-left: 0;
+  padding-right: 25px;
+  text-align: right;
+}
+.dropbtn {
+  cursor: pointer;
+  border: none;
+  background-color: none;
+  padding: .5rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.show {display:block;}
+.addportfolio-h5
+{
+    text-align: left;
+    padding-left: 22px;
+}

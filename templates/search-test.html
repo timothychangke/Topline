@@ -1,0 +1,93 @@
+{% extends "layout.html"%}
+{% block title %}
+    {{ ticker }}
+{% endblock %}
+
+{% block main%}
+    <div id="search-container">
+        <div id="company-info">
+            <p id="ticker-dot">{{ ticker }} • {{ exchange }}</p>
+            <div class="search-header">
+                <img id="search=-logo" src={{ image_url }}>
+                <h1 id="search-company-name" style="font-weight: bold;">{{ name }}</h1>
+            </div>
+            <div id="company-info-container">
+                <h2 id="search-company-description-header">Description</h2>
+                <p id="search-company-industry">{{ industry }}</p>
+                <section id="search-company-description">{{ description }}</section>
+                <a href="{{ website }}" id="search-company-website">{{ website }}</a>
+                <div id="company-info-table">
+                    <table class="table table-borderless ">
+                        <tbody>
+                            <tr="company-info-first-row">
+                                <th>CEO</th>
+                                <td>{{ ceo }}</td>
+                            </tr=>
+                            <tr>
+                                <th>EMPLOYEES</th>
+                                <td>{{ employees }}</td>
+                            </tr>
+                            <tr>
+                                <th>PHONE NUMBER</th>
+                                <td>{{ phone }}</td>
+                            </tr>
+                            <tr>
+                                <th>COMPANY ADDRESS</th>
+                                <td>{{ address }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="price-info">
+            <table class="table table-borderless">
+                <tbody>
+                    <tr>
+                    </tr>
+                    <tr style="border-top: none;">
+                        <th>PREVIOUS CLOSE</th>
+                        <td>{{ price }}</td>
+                    </tr>
+                    <tr>
+                        
+                        <th>YEAR RANGE</th>
+                        <td>{{ week_low }} - {{ week_high }}</td>
+                    </tr>
+                    <tr>
+                        
+                        <th>MARKET CAP</th>
+                        <td>{{ market_cap }}</td>
+                    </tr>
+                    <tr>
+                        
+                        <th>VOLUME</th>
+                        <td>{{ volume }}</td>
+                    </tr>
+                    <tr>
+                        
+                        <th>PE RATIO</th>
+                        <td>{{ pe_ratio }}</td>
+                    </tr>
+                    <tr>
+                        
+                        <th>EXCHANGE</th>
+                        <td>{{ exchange }}</td>
+                    </tr>
+                    <tr>
+                        
+                        <th>YEAR TO DATE CHANGE</th>
+                        <td>{{ ytd_change }}</td>
+                    </tr>
+                    <tr style="border-bottom: none;">
+                        
+                        <th>CURRENCY</th>
+                        <td>{{ currency }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+
+{% endblock%}

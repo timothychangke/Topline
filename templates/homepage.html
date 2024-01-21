@@ -1,0 +1,113 @@
+{% extends "layout.html"%}
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main%}
+<div class="watchlist-homepage">
+<h1 style="font-size: 50px;">{{ users_name }}'s Portfolio</h1>
+<table class="table tablestriped watchlist-homepage">
+    <p>{{ ticker }}</p>
+    <thead>
+        <tr>
+            <th class="th-watchlist-homepage">SYMBOL</th>
+            <th class="th-watchlist-homepage">NAME</th>
+            <th class="th-watchlist-homepage">MARKET CAP</th>
+            <th class="th-watchlist-homepage">DAYS HELD</th>
+            <th class="th-watchlist-homepage">PRICE</th>
+            <th class="th-watchlist-homepage">QUANTITY</th>
+            <th class="th-watchlist-homepage">TOTAL INVESTED</th>
+            <th class="th-watchlist-homepage">PRICE NOW</th>
+            <th class="th-watchlist-homepage">TOTAL NOW</th>
+            <th class="th-watchlist-homepage">PROFIT/LOSS</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for li in all %}
+        <tr>
+            <td class="td-watchlist-homepage">{{ li[1] }}</td>
+            <td class="td-watchlist-homepage">{{ li[2] }}</td>
+            <td class="td-watchlist-homepage">$ {{ li[4] }}</td>
+            <td class="td-watchlist-homepage">{{ days[loop.index0] }} days</td>
+            <td class="td-watchlist-homepage">$ {{ li[3]}}</td>
+            <td class="td-watchlist-homepage">{{ li[5]}}</td>
+            <td class="td-watchlist-homepage">$ {{ li[7]}}</td>
+            <td class="td-watchlist-homepage">$ {{ prices[loop.index0] }}</td>
+            <td class="td-watchlist-homepage">$ {{ total_new_list[loop.index0] }}</td>
+            <td class="td-watchlist-homepage" id="pnl-percentage">{{ pnl[loop.index0] }}%</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <th style="text-align: center;">PORTFOLIO VALUE</th>
+            <td style="text-align: center;">$ {{ portfolio_value }}</td>
+        </tr>
+    </tbody>
+</table>
+<div style="width: 100%; height:800px; text-align: center; padding: 200px; padding-top: 75px;">
+    <canvas id="myChart" width="1050px" height="600px"></canvas>
+</div>
+{% block javascript %}
+<script>
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: {{ name_list | safe}},
+        datasets: [{
+            label: '% of Portfolio%',
+            data: {{ total_list | safe}},
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.6)',
+                'rgba(54, 162, 235, 0.6)',
+                'rgba(255, 206, 86, 0.6)',
+                'rgba(75, 192, 192, 0.6)',
+                'rgba(153, 102, 255, 0.6)',
+                'rgba(255, 159, 64, 0.6)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1,
+            hoverBorderColor: "black",
+            hoverBorderWidth: 2,
+            pointHoverRadius: 5
+        }]
+    },
+    options: 
+    {
+        responsive : false,
+        title: {
+            display: true,
+                text: "% of Porfolio%",
+                    fontSize: 20,
+        },
+        legend: {
+            position: "right",
+                labels: {
+                fontColor: "gray"
+            },
+            display: true,
+        },
+
+        elements: {
+            hitRadius: 3,
+        }
+    }
+});
+</script>
+{% endblock %}
+</div>
+{% endblock %}
