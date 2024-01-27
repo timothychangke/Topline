@@ -46,7 +46,7 @@ git clone https://github.com/timothychangke/Topline.git
 
 Navigate to the project directory:
 ```bash
-cd your-repo
+cd Topline
 ```
 
 Install dependencies:
