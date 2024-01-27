@@ -29,4 +29,37 @@ Worried about mistakes? Fret not! TopLine's got your back with error pop-ups usi
 ## 🚀 Join the TopLine Community!
 Whether you're a seasoned investor or just diving into the world of stocks, TopLine is here for you. Start tracking, stay informed, and make your stock journey a breeze!
 
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+Python 
+pip 
+Flask
+
+
+Follow these steps to set up and run the Flask application:
+
+Clone the repository:
+```bash
+git clone https://github.com/timothychangke/Topline.git
+```
+
+Navigate to the project directory:
+```bash
+cd your-repo
+```
+
+Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+Run the Flask application:
+```bash
+flask run
+```
+Access the application:
+Open your web browser and navigate to http://localhost:3000 (or a different port if configured).
+
+
 # 🚀 Happy Investing with TopLine! 📊💰✨
